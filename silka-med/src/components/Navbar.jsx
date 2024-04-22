@@ -3,16 +3,8 @@ import { Link } from "react-scroll";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
-    const [menu, setMenu] = useState(false);
-
-
-    const handleChange = () => {
-        setMenu(!menu);
-
-    };
-    const closeMenu = () => {
-        setMenu(false);
-    };
+    
+ 
 
     return (
         <div className="fixed w-full z-10 text-white">
@@ -75,14 +67,7 @@ const Navbar = () => {
                             Contact Us
                         </button>
                     </div>
-                    <div className=" lg:hidden flex items-center">
-                        {menu ? (
 
-                            <AiOutlineClose size={28} onClick={handleChange} />
-                        ) : (
-                            <AiOutlineMenu size={28} onClick={handleChange} />
-                        )}
-                    </div>
                 </div>
             </div>
         </div>
