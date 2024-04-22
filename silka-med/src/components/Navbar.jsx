@@ -6,10 +6,10 @@ const Navbar = () => {
     const [menu, setMenu] = useState(false);
 
 
-    function handleChange() {
+    const handleChange = () => {
         setMenu(!menu);
 
-    }
+    };
     const closeMenu = () => {
         setMenu(false);
     };
