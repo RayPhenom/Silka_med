@@ -1,8 +1,28 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
+    const [menu, setMenu] = useState(false);
+     const [showForm , setShowForm] = useState(false);
+  
+    const handleChange = () => {
+      setMenu(!menu); 
+    };
+  
+    const closeMenu = () => {
+      setMenu(false); 
+    };
+
+    const openForm = () => {
+        setShowForm(true);
+        setMenu(false);
+    }
+
+    const closeForm = () => { 
+        setShowForm(false);
+    }
 
     return (
         <div className="fixed w-full z-10 text-white">
@@ -61,11 +81,24 @@ const Navbar = () => {
                         </Link>
                     </nav>
                     <div className="hidden lg:flex">
-                        <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out">
+                        <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
+                        onClick={openForm}>
                             Contact Us
                         </button>
                     </div>
-                   ///
+                    
+                    {showForm && <Contact closeForm={closeForm}/>}
+
+                    <div className=" lg:hidden flex items-center">
+                        {menu ? (
+
+                            <AiOutlineClose size={28} onClick={handleChange} />
+                        ) : (
+                            <AiOutlineMenu size={28} onClick={handleChange} />
+                        )}
+                    </div>
+
+
                 </div>
                 <div
                     className={
