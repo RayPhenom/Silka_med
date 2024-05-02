@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import {  Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Contact from "../models/Contact";
 
@@ -29,13 +29,13 @@ const Navbar = () => {
             <div>
                 <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                     <div className="flex flex-row items-center cursor-pointer">
-                        <Link to="home" spy={true} smooth={true} duration={500}>
+                        <Link to="/" spy={true} smooth={true} duration={500}>
                             <h1 className="text-2xl font-semibold">SilkaMedical.</h1>
                         </Link>
                     </div>
                     <nav className="hidden lg:flex flex-row items-center text-lg font-medium gap-10">
                         <Link
-                            to="home"
+                            to="/"
                             spy={true}
                             smooth={true}
                             duration={500}

@@ -1,10 +1,34 @@
 import React from 'react'
-import Navbar from "./components/Navbar"
+import { Home,About,UserLayout } from './components';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <UserLayout/>,
+    children:[
+      {
+        path:"/",
+        element:<Home/>
+      },
+      {
+        path:"about",
+        element:<About/>
+      },
+    ]
+  },
+]);
+
+
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <main>
         <div id='home'>
           <Home />
@@ -13,8 +37,8 @@ const App = () => {
         <div id='about'>
           <About/>
         </div>
-      </main>
-
+      </main> */}
+      <RouterProvider router={router} />
     </>
   )
 }
