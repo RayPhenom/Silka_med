@@ -1,11 +1,20 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar"
 
 const App = () => {
   return (
     <>
-      <Navbar/>
-    
+      <Navbar />
+      <main>
+        <div id='home'>
+          <Home />
+        </div>
+        
+        <div id='about'>
+          <About/>
+        </div>
+      </main>
+
     </>
   )
 }

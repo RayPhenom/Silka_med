@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Contact from "../models/Contact";
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
-     const [showForm , setShowForm] = useState(false);
-  
+    const [showForm, setShowForm] = useState(false);
+
     const handleChange = () => {
-      setMenu(!menu); 
+        setMenu(!menu);
     };
-  
+
     const closeMenu = () => {
-      setMenu(false); 
+        setMenu(false);
     };
 
     const openForm = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
         setMenu(false);
     }
 
-    const closeForm = () => { 
+    const closeForm = () => {
         setShowForm(false);
     }
 
@@ -82,12 +82,12 @@ const Navbar = () => {
                     </nav>
                     <div className="hidden lg:flex">
                         <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
-                        onClick={openForm}>
+                            onClick={openForm}>
                             Contact Us
                         </button>
                     </div>
-                    
-                    {showForm && <Contact closeForm={closeForm}/>}
+
+                    {showForm && <Contact closeForm={closeForm} />}
 
                     <div className=" lg:hidden flex items-center">
                         {menu ? (
@@ -111,6 +111,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         className="hover:text-hoverColor transition-all cursor-pointer"
+                        onClick={closeMenu}
                     >
                         Home
                     </Link>
@@ -120,6 +121,8 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         className="hover:text-hoverColor transition-all cursor-pointer"
+                        onClick={closeMenu}
+
                     >
                         About Us
                     </Link>
@@ -129,6 +132,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         className="hover:text-hoverColor transition-all cursor-pointer"
+                        onClick={closeMenu}
                     >
                         Services
                     </Link>
@@ -138,6 +142,7 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         className="hover:text-hoverColor transition-all cursor-pointer"
+                        onClick={closeMenu}
                     >
                         Doctors
                     </Link>
@@ -147,11 +152,13 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                         className="hover:text-hoverColor transition-all cursor-pointer"
+                        onClick={closeMenu}
                     >
                         Blog
                     </Link>
                     <div className="lg:hidden">
-                        <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out">
+                        <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
+                            onClick={openForm}>
                             Contact Us
                         </button>
                     </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import { Button } from "react-scroll";
-import "animate.css";
-import "react-toastify/dist/ReactToastify.css";
+import Button from "../layouts/Button";
 
 
 
