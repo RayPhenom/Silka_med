@@ -33,6 +33,15 @@ const About = () => {
           fugit unde possimus labore eveniet minus nihil explicabo voluptatum
           rerum exercitationem sequi. Rerum!
         </p>
+        <p className="text-justify lg:text-start">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, eum
+          magni reprehenderit laudantium reiciendis ducimus aperiam debitis
+          fugit unde possimus labore eveniet minus nihil explicabo voluptatum
+          rerum exercitationem sequi. Rerum!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, eum
+          magni reprehenderit laudantium reiciendis ducimus aperiam debitis
+          fugit unde possimus labore eveniet minus nihil explicabo voluptatum
+          rerum exercitationem sequi. Rerum!
+        </p>
       </div>
       <div className="w-full lg:w-1/2">
         <img src={img} alt="img" className="rounded-lg" /> 

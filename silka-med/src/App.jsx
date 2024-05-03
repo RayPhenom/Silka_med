@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home,About,UserLayout } from './components';
+import { Home,About,UserLayout, Services } from './components';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
         path:"about",
         element:<About/>
       },
+      {
+        path:"services",
+        element:<Services/>
+      },
     ]
   },
 ]);
@@ -37,7 +41,12 @@ const App = () => {
         <div id='about'>
           <About/>
         </div>
+
+         <div id='services'>
+        <Service/>
+      </div>
       </main> */}
+     
       <RouterProvider router={router} />
     </>
   )
