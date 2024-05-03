@@ -41,7 +41,7 @@ const Doctors = () => {
                 <div>
                     <h1 className="text-4xl font-semibold text-center lg:text-start">Our Doctors</h1>
                     <p className="mt-2 text-center lg:text-start">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Behind every fine doctor, there is always a nurse.” “Nobody, but nobody, is going to stop breathing on me!” “Learn To Listen With Your Fingers.
                     </p>
                 </div>
                 <div className="flex gap-5 mt-4 lg:mt-0">
