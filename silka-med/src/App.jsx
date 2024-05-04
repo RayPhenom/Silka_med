@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home,About,UserLayout, Services, Doctors } from './components';
+import { Home,About,UserLayout, Services, Doctors, Blog } from './components';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
       {
         path:"doctors",
         element:<Doctors/>
+      },
+      {
+        path:"blog",
+        element:<Blog/>
       },
     ]
   },

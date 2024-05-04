@@ -3,6 +3,7 @@ import {  Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Contact from "../models/Contact";
 
+
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [showForm, setShowForm] = useState(false);

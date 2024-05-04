@@ -43,7 +43,7 @@ const About = () => {
           rerum exercitationem sequi. Rerum!
         </p>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-3/4">
         <img src={img} alt="img" className="rounded-lg" /> 
       </div>
     </div>
