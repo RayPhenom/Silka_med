@@ -4,8 +4,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { useRef } from "react";
 
 const Doctors = () => {
+    
+
     const data = [
         {
             img: "/src/assets/img/berryl.jpg",
@@ -27,11 +30,36 @@ const Doctors = () => {
             name: "Dr. Onix Lumumba",
             specialties: "Surgeon",
         },
-    ]
+        {
+            img: "/src/assets/img/berryl.jpg",
+            name: "Dr. Beryl Lumumba",
+            specialties: "CardioVascular",
+        },
+        {
+            img: "/src/assets/img/isha.jpg",
+            name: "Dr. Loisha Awuor",
+            specialties: "Orthopedic",
+        },
+        {
+            img: "/src/assets/img/giddy.jpg",
+            name: "Dr. Giddings Muok",
+            specialties: "Pedeatrician",
+        },
+        {
+            img: "/src/assets/img/onix.jpg",
+            name: "Dr. Onix Lumumba",
+            specialties: "Surgeon",
+        },
+    ];
+    const slider = useRef(null);
+
+
     const settings = {
+        accessibility: true,
         dots: true,
         infinite: true,
         speed: 500,
+        arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3,
     };
@@ -45,16 +73,18 @@ const Doctors = () => {
                     </p>
                 </div>
                 <div className="flex gap-5 mt-4 lg:mt-0">
-                    <button className="bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]">
+                    <button className="bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]"
+                    onClick={()=>slider.current.slickPrev()}>
                         <FaArrowLeft size={25} />
                     </button>
-                    <button className="bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]">
+                    <button className="bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]"
+                    onClick={()=>slider.current.slickNext()}>
                         <FaArrowRight size={25} />
                     </button>
                 </div>
             </div>
             <div className="mt-5">
-                <Slider {...settings}>
+                <Slider ref={slider} {...settings}>
                     {data.map((e, index) => (
                         <div className="h-[350px] text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 cursor-pointer"
                             key={index}>
